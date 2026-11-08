@@ -16,6 +16,10 @@ def create_app() -> Flask:
         #Registrar la view de la IA
         from .ai.asistente_ai import asistente_bp
         app.register_blueprint(asistente_bp);
+
+        #Registrar la view de reportes
+        from .reportes import reportes_bp
+        app.register_blueprint(reportes_bp)
     return app
 
 app = create_app()

@@ -148,3 +148,10 @@ appbuilder.add_view(
     icon="fa-dashboard",
     category="Menu principal"
 )
+
+appbuilder.add_link(
+    name="Reportes",
+    href="/reportes/cliente",
+    icon="fa-chart-bar",
+    category="Reportes"
+)
