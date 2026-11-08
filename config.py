@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 from flask_appbuilder.security.manager import (
     AUTH_REMOTE_USER,
     AUTH_DB,
@@ -7,6 +8,7 @@ from flask_appbuilder.security.manager import (
 )
 
 basedir = os.path.abspath(os.path.dirname(__file__))
+load_dotenv(os.path.join(basedir, ".env"))
 
 # Your App secret key
 SECRET_KEY = "01234567890123456789"

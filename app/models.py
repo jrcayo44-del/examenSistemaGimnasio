@@ -76,7 +76,12 @@ class Clase(Model):
     reservas = relationship("Reserva", back_populates="clases")
 
     def __repr__(self):
-        return f"{self.nombre_clase} - {self.descripcion} - Horario: {self.horario} - Entrenador: {self.entrenador.nombre} {self.entrenador.apellido}"
+        return (
+            f"{self.nombre_clase} - {self.descripcion} "
+            f"- Horario: {self.horario} "
+            f"- Entrenador: {self.entrenadores.nombre} "
+            f"{self.entrenadores.apellido}"
+        )
 
 class Reserva(Model):
     __tablename__ = "reservas"
